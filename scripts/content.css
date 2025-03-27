@@ -13,7 +13,7 @@ button#btnBQ{
      /* border-radius: 50%; */
      border: 2px solid black;
      border-radius: 20px;
-
+     text-align: center;
      animation-name: stretch;
      animation-duration: 5s;
      animation-timing-function: linear;
@@ -26,6 +26,7 @@ button#btnBQ{
     transform: scale(1.1);
     background-color: teal;
     border-color: gray;
+    animation-name: none;
     cursor: pointer;
 }
 
@@ -44,5 +45,28 @@ button#btnBQ{
         background-color: teal;
         border-color: gray;
         transform: scale(1.5);
+    }
+}
+
+#btnBQ[listening]{
+     animation-name: fast-stretch;
+     animation-duration: 0.2s;
+     animation-timing-function: linear;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+     animation-play-state: running;
+}
+
+@keyframes fast-stretch{
+    0%{
+        background-color: turquoise;
+        border-color: black;
+        transform: scale(1);
+    }
+    
+    100%{
+        background-color: teal;
+        border-color: gray;
+        transform: scale(1.4);
     }
 }
